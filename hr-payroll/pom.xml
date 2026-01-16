@@ -22,7 +22,7 @@
 		<java.version>11</java.version>
 		<lombok.version>1.18.34</lombok.version>
 
-		<!-- Spring Cloud compatible com Spring Boot 2.3.x -->
+		<!-- Spring Cloud  -->
 		<spring-cloud.version>Hoxton.SR12</spring-cloud.version>
 	</properties>
 
@@ -53,10 +53,22 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
-		<!-- Ribbon (Netflix Client-Side Load Balancer) -->
+		<!-- Ribbon (Client-Side Load Balancer) -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+
+		<!-- Eureka Client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<!-- Hystrix (Circuit Breaker - Maintenance Mode) -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
 
 		<!-- Lombok -->

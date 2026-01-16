@@ -13,14 +13,13 @@
 	</parent>
 
 	<groupId>com.devsuperior</groupId>
-	<artifactId>hr-worker</artifactId>
+	<artifactId>hr-eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hr-worker</name>
-	<description>Worker Microservice</description>
+	<name>hr-eureka-server</name>
+	<description>Eureka Server</description>
 
 	<properties>
 		<java.version>11</java.version>
-		<lombok.version>1.18.34</lombok.version>
 
 		<!-- Spring Cloud  -->
 		<spring-cloud.version>Hoxton.SR12</spring-cloud.version>
@@ -41,37 +40,16 @@
 
 	<dependencies>
 
-		<!-- JPA -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<!-- Web -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<!-- Eureka Client -->
+		<!-- Eureka Server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
-		<!-- H2 -->
+		<!-- JAXB -->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-
-		<!-- Lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
-			<scope>provided</scope>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
 		</dependency>
 
 		<!-- Testes -->
@@ -97,13 +75,6 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<release>${java.version}</release>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-							<version>${lombok.version}</version>
-						</path>
-					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 
